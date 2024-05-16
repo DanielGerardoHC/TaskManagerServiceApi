@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using TaskManagerServiceApi.Context;
+using TaskManagerServiceApi.RequestModel;
 
 namespace TaskManagerServiceApi.Controllers
 {
@@ -51,24 +52,58 @@ namespace TaskManagerServiceApi.Controllers
             {
                 return Unauthorized();
             }
-            User user = await _context.Users.FirstOrDefaultAsync(x => x.UserId == int.Parse(userID));
+            User? user = await _context.Users.FirstOrDefaultAsync(x => x.UserId == int.Parse(userID));
             if (user != null)
             {
+                user.PasswordHash = null;
                 return user;
             }
 
             return NotFound();
         }
-        
+
+        [Authorize] 
+        [HttpPut("ChangePass")]
+        public async Task<IActionResult> ChangePassword(ChangePasswordRequest? passwordRequest)
+        {
+            if (passwordRequest != null)
+            {
+                User? userToChangePass = await _context.Users.FirstOrDefaultAsync(e =>  e.PasswordHash == passwordRequest.OldPassword && 
+                    e.UserName == passwordRequest.UserName); 
+                
+                if(userToChangePass != null)
+                {
+                     userToChangePass.PasswordHash = passwordRequest.NewPassword;
+                    _context.Entry(userToChangePass).State = EntityState.Modified;
+                    try
+                    {
+                        await _context.SaveChangesAsync();
+                    }
+                    catch (DbUpdateConcurrencyException)
+                    {
+                        return Conflict();
+                    }
+                }
+                else
+                {
+                    NotFound();
+                }
+            }
+            else
+            {
+                BadRequest();
+            }
+
+            return NoContent();
+        }
         [Authorize]
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+        public async Task<IActionResult> PutUser(User user, int id)
         {
             if (id != user.UserId)
             {
                 return BadRequest();
             }
-
             _context.Entry(user).State = EntityState.Modified;
 
             try

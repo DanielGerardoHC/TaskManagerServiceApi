@@ -274,3 +274,4 @@ C:\Users\gerar\source\repos\TaskManagerServiceApi\obj\Debug\net8.0\TaskManagerSe
 C:\Users\gerar\source\repos\TaskManagerServiceApi\obj\Debug\net8.0\TaskManagerServiceApi.RazorAssemblyInfo.cs
 C:\Users\gerar\source\repos\TaskManagerServiceApi\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\gerar\source\repos\TaskManagerServiceApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gerar\source\repos\TaskManagerServiceApi\obj\Debug\net8.0\TaskManagerServiceApi.sourcelink.json
