@@ -7,17 +7,23 @@ La cual se encarga de mostrar de forma atractiva los datos que la API le proporc
 
 **Funcionalidades**
 
-Autentificacion: Se integro del uso de JWT para realizar la validacion de usuarios y mantener una mayor seguridad en los datos
+Autentificacion: Se integro el uso de JWT para realizar la validacion de usuarios y mantener una mayor seguridad en los datos
 Crear tareas: Permite a los usuarios añadir nuevas tareas especificando detalles como el título, la descripcion, la fecha de vencimiento, la prioridad, el estado y el usuario asignado
+
 Leer tareas: Proporciona una vista general de todas las tareas existentes, con detalles completos de cada una devolviendo unicamente las tareas segun el token generado cuando un usuario se autentifica
+
 Actualizar tareas: Permite modificar los detalles de las tareas existentes
+
 Eliminar tareas: Facilita la eliminación de tareas que ya no son necesarias
+
 Registrar: Permite relizar el registro de nuevos usuarios
+
 Actualizar Usuario: Proporciona la funcionalidad de que los usuario puedan modificar sus credenciales de inicio de sesion o informacion personal
 
 **Tecnologías Utilizadas**
 
 ASP.NET Core: Framework utilizado para desarrollar la API REST
+
 Entity Framework Core: ORM utilizado para interactuar con la base de datos
 
 **Estructura del Proyecto**
