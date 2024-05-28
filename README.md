@@ -8,6 +8,7 @@ La cual se encarga de mostrar de forma atractiva los datos que la API le proporc
 **Funcionalidades**
 
 Autentificacion: Se integro el uso de JWT para realizar la validacion de usuarios y mantener una mayor seguridad en los datos
+
 Crear tareas: Permite a los usuarios añadir nuevas tareas especificando detalles como el título, la descripcion, la fecha de vencimiento, la prioridad, el estado y el usuario asignado
 
 Leer tareas: Proporciona una vista general de todas las tareas existentes, con detalles completos de cada una devolviendo unicamente las tareas segun el token generado cuando un usuario se autentifica
