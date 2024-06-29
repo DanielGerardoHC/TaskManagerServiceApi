@@ -27,7 +27,7 @@ ASP.NET Core: Framework utilizado para desarrollar la API REST
 
 Entity Framework Core: ORM utilizado para interactuar con la base de datos
 
-**Estructura del Proyecto**
+# Estructura del Proyecto
 
 Controllers: Contiene los controladores para gestionar las solicitudes HTTP y realizar las operaciones CRUD
 
