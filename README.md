@@ -27,6 +27,11 @@ ASP.NET Core: Framework utilizado para desarrollar la API REST
 
 Entity Framework Core: ORM utilizado para interactuar con la base de datos
 
+**Requisitos**
+
+.NET 8.0 o superior
+SQL Server (o cualquier otro proveedor de base de datos compatible con Entity Framework Core)
+
 # Estructura del Proyecto
 
 Controllers: Contiene los controladores para gestionar las solicitudes HTTP y realizar las operaciones CRUD
@@ -34,9 +39,6 @@ Controllers: Contiene los controladores para gestionar las solicitudes HTTP y re
 Context: Contiene las clases de entidad que representan las tablas de la base de datos
 
 RequestModel: Contiene la clase modelo a utilizar cuando un usuario desea hacer un cambio de contraseña
-
-.NET 8.0 o superior
-SQL Server (o cualquier otro proveedor de base de datos compatible con Entity Framework Core)
 
 # Configuracion de la base de datos
 
