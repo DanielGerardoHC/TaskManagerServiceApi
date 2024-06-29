@@ -1,4 +1,4 @@
-## Task Manager Service API
+# Task Manager Service API
 
 **Descripcion**
 
@@ -37,3 +37,7 @@ RequestModel: Contiene la clase modelo a utilizar cuando un usuario desea hacer 
 
 .NET 8.0 o superior
 SQL Server (o cualquier otro proveedor de base de datos compatible con Entity Framework Core)
+
+# Configuracion de la base de datos
+
+appsettings.json: Aqui encontrara la cadena de conexion a la base de datos para establecer una conexion de manera LocalHost o Remota
