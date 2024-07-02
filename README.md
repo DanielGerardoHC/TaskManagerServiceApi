@@ -47,4 +47,4 @@ appsettings.json: Aqui encontrara la cadena de conexion a la base de datos para 
 TaskManagerDB.Sql: Script a ejecutar para inicializar la base de datos
 # Diagrama entidad relacion 
 
-<img src="https://github.com/DanielGerardoHC/TaskManagerServiceApi/blob/main/TaskManagerDB-Diagram.drawio" title="TaskManagerDB" alt="TaskManagerDB" width="155" height="155"/>  <img>
+<img src="https://github.com/DanielGerardoHC/TaskManagerServiceApi/blob/main/TaskManagerDB-Diagram.jpeg" title="TaskManagerDB" alt="TaskManagerDB" width="155" height="155"/>  <img>
